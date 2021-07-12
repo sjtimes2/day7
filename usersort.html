@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p id="demo"></p>
+  <script>
+    users = ['Shubham', 'Aman', 'Naman', 'Gagan', 'Pawan', 'Neel'];
+    maths = {
+      'Shubham': 90,
+      'Aman': 91,
+      'Naman': 70,
+      'Gagan': 71,
+      'Pawan': 20,
+      'Neel': 21
+    }
+    
+    users = users.sort(function(a,b) {
+      console.log(a,b);
+      return maths[a] - maths[b];
+    });
+
+    document.getElementById('demo').innerHTML = users;
+
+  </script>
+</body>
+</html>
