@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="main">
+    <h1 id="title">Hello World</h1>
+    <p id="hint">Simple Paragraph</p>
+  </div>
+
+  <button onclick="insertElement()">insertElement</button>
+
+  <script>
+    function insertElement() {
+
+      var p = document.createElement('p');
+      var textNode = document.createTextNode('Hi this is new textNode');
+
+      p.appendChild(textNode);
+      var currentDiv = document.getElementById('main');
+      document.body.appendChild(p, currentDiv);
+
+    }
+  </script>
+</body>
+
+</html>

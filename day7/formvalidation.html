@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>Form Validation</h2>
+
+  Name<input type="text" id="name"><br>
+  Number<input type="number" id="number"><br>
+  Password<input type="password" id="password"><br>
+  <button type="button" onclick="myFunction()">Submit</button>
+
+
+  <p id="demo"></p>
+
+  <script>
+    function myFunction() {
+
+      let name = document.getElementById('name').value;
+      let number = document.getElementById('number').value;
+      let password = document.getElementById('password').value;
+
+      let text;
+      if(isNaN(name) || name !== "Shubham") {
+
+        text += "Name should be Shubham";
+      } else if(isNaN(number) || number !== 100 ) {
+        text += "Number should be 100";
+      } else if(isNaN(password) || password !== "xyz") {
+        text += "Password should be xyz";
+      }
+
+      alert(text);
+    }
+  </script>
+</body>
+</html>
