@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div, p, a {
+      padding: 15px 30px;
+      display: block;
+      border: 2px solid black;
+      background: white;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">DIV
+    <p class="hint">P
+      <a href="#">A</a>
+    </p>
+  </div>
+  <script>
+    function showTagName() {
+      alert('capturing: '+this.tagName);
+    }
+
+    var elems = document.querySelectorAll("div,p,a");
+    for(let elem of elems) {
+      elem.addEventListener('click', showTagName, true);
+    }
+  </script>
+</body>
+</html>

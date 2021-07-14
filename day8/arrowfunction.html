@@ -1,0 +1,33 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrow Function</title>
+
+</head>
+
+<body>
+  <h2>Body Function</h2>
+  <script>
+    const fxn = () => {
+      const date = new Date();
+      const hour = date.getHours();
+      if (hour > 12) {
+        document.write('PM');
+      } else {
+        document.write('AM');
+        
+      }
+    }
+
+    const increment = a => a+5;
+
+    document.write(increment(10));
+
+    fxn();
+  </script>
+</body>
+
+</html>
